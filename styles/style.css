@@ -49,7 +49,7 @@ section#personal-info > form{
     border-radius: 10px;
     width: calc(100% - 100px);
     gap: 20px;
-    height: 400px;
+    height: 90%;
     display: flex;
     flex-direction: column;
     padding: 20px;
