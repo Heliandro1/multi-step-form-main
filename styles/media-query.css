@@ -1,3 +1,76 @@
-@media screen and  {
-    
+@media only screen and (min-width:768px){
+    body{
+        background-color: hsl(217, 100%, 97%);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: hsl(0, 0%, 100%);
+        height: 650px;
+        width: 70vw;
+        padding: 10px;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    section#personal-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        height: 95%;
+    }
+    section#personal-info > form{
+        transform: none;
+    }
+    section#personal-info  h1{
+        font-size: 40px;
+    }
+    section > footer{
+        background-color: hsl(0, 0%, 100%);
+        position: relative;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    section#side-bar{
+        background-image: url(../assets/images/bg-sidebar-desktop.svg);
+        background-position: bottom;
+        height: 95%;
+        width: 300px;
+        flex-grow: 0;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    section#side-bar > div{
+        display: flex;
+        gap: 20px;
+    }
+    div.info{
+        display: block;
+        color: hsl(0, 0%, 100%);
+        font-family: Ubuntu-medium;
+        font-weight: 500;
+    }
+    section#personal-info button{
+        right: 50px;
+    }
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        display: block;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
 }

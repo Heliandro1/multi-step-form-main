@@ -16,6 +16,9 @@
     margin: 0px;
     font-family: Ubuntu-regular;
 }
+*::selection{
+    background-color: hsl(206, 100%, 59%);
+}
 body, html{
     width: 100vw;
     height: 100vh;
@@ -80,6 +83,10 @@ div.circle{
     font-family: Ubuntu-medium;
     color: white;
 }
+div.selected{
+   background-color: hsl(206, 94%, 87%);
+   color: black;
+}
 div.circle:hover{
     background-color: hsl(206, 94%, 87%);
     cursor: pointer;
@@ -93,6 +100,7 @@ div.info{
 div.field{
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 div.field > input{
     font-family: Ubuntu-medium;
@@ -104,6 +112,14 @@ div.field > input{
     border: 1px solid hsl(229, 24%, 87%);
     border-radius: 5px;
     font-weight: 400;
+}
+div.field > div{
+    display: flex;
+    justify-content: space-between;
+}
+span.erro{
+    color: red;
+    display: none;
 }
 section#personal-info button{
     position: absolute;
@@ -128,5 +144,4 @@ section#personal-info button:hover{
 span{
     color: hsl(229, 24%, 87%);
 }
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { display: none; }

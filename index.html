@@ -13,31 +13,31 @@
     <!-- Sidebar start -->
     <section id="side-bar">
       <div>
-        <div class="circle">1</div>
+        <div class="circle selected">1</div>
         <div class="info">
-          <span>Step 1</span>
-          Your info
+          <span>STEP 1</span>
+          <h1>YOUR INFO</h1>
         </div>
       </div>
       <div>
         <div class="circle">2</div>
         <div class="info">
-          <span>Step 2</span>
-          Select plan
+          <span>STEP 2</span>
+          <h1>SELECT PLAN</h1>
         </div>
       </div>
       <div>
         <div class="circle">3</div>
         <div class="info">
-          <span>Step 3</span>
-          Add-ons
+          <span>STEP 3</span>
+          <h1>ADD-ONS</h1>
         </div>
       </div>
       <div>
         <div class="circle">4</div>
         <div class="info">
-          <span>Step 4</span>
-          Summary
+          <span>STEP 4</span>
+          <h1>SUMMARY</h1>
         </div>
       </div>
     </section>
@@ -55,15 +55,24 @@
           </p>
         </div>
         <div class="field">
-          <label for="name">Name</label>
+          <div>
+            <label for="name">Name</label>
+            <span class="erro">This field is required</span>
+          </div>
           <input type="text" name="name" id="name" placeholder=" e.g. Stephen King">
         </div>
         <div class="field">
-          <label for="email">Email Address</label>
+          <div>
+            <label for="email">Email Address</label>
+            <span class="erro">This field is required</span>
+          </div>
           <input type="email" name="email" id="email" placeholder=" e.g. stephenking@lorem.com">
         </div>
         <div class="field">
-          <label for="">Phone Number</label>
+          <div>
+            <label for="">Phone Number</label>
+            <span class="erro">This field is required</span>
+          </div>
           <input type="text" autocomplete="tel" name="phone" id="phoneNumber" placeholder="e.g. +1 234 567 890">
         </div>
       </form>
