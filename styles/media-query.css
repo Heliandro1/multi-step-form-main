@@ -17,6 +17,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        transition: width 1s, height 1s;
+        transition-timing-function: ease;
     }
     section#personal-info{
         display: flex;

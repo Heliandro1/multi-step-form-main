@@ -53,6 +53,8 @@ section#personal-info > form{
     display: flex;
     flex-direction: column;
     padding: 20px;
+    transition: width 1s, height 1s, transform 1s;
+    transition-timing-function: ease;
 }
 section#personal-info  h1{
     font-family: Ubuntu-bold;
