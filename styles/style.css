@@ -14,7 +14,7 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: Ubuntu-regular;
+    font-family: Ubuntu-regular, sans-serif;
 }
 *::selection{
     background-color: hsl(206, 100%, 59%);
@@ -57,7 +57,7 @@ section#personal-info > form{
     transition-timing-function: ease;
 }
 section#personal-info  h1{
-    font-family: Ubuntu-bold;
+    font-family: Ubuntu-bold, sans-serif;
     font-weight: 700;
 }
 section#personal-info p{
@@ -82,7 +82,7 @@ div.circle{
     display: inline-block;
     border-radius: 50%;
     padding: 10px;
-    font-family: Ubuntu-medium;
+    font-family: Ubuntu-medium, sans-serif;
     color: white;
 }
 div.selected{
@@ -105,7 +105,7 @@ div.field{
     gap: 5px;
 }
 div.field > input{
-    font-family: Ubuntu-medium;
+    font-family: Ubuntu-medium, sans-serif;
     font-weight: 700;
     font-size: 16px;
     color: hsl(231, 11%, 63%);
@@ -128,7 +128,7 @@ section#personal-info button{
     right: 10px;
     height: 45px;
     width: 100px;
-    font-family: Ubuntu-medium;
+    font-family: Ubuntu-medium, sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: white;
