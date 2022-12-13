@@ -108,7 +108,6 @@ div.field > input{
     font-family: Ubuntu-medium, sans-serif;
     font-weight: 700;
     font-size: 16px;
-    color: hsl(231, 11%, 63%);
     padding: 10px;
     height: 25px;
     border: 1px solid hsl(229, 24%, 87%);
@@ -119,9 +118,16 @@ div.field > div{
     display: flex;
     justify-content: space-between;
 }
+@keyframes slide {
+    0%{color: rgb(255, 255, 255);}
+    50%{color: rgba(255, 0, 0, 0.5);}
+    100%{color: red;}
+}
 span.erro{
     color: red;
-    display: none;
+    animation: slide;
+    animation-duration: 1s;
+    animation-timing-function: ease;
 }
 section#personal-info button{
     position: absolute;
