@@ -27,6 +27,9 @@ function isValidFields() {
     }else if(fieldPhoneNumber.dataset.erro == 'error'){
         removeError('#field-number');
     }
+    if (isValidName(fieldName.value.trim().split(' ')) && isValidEmail(fieldEmail.value.trim()) && isValidPhoneNumber(fieldPhoneNumber.value)) {
+        window.location = 'select-plan.html';
+    }
 }
 function setError(error, field) {
     const span = document.createElement("span");
@@ -43,7 +46,6 @@ function setError(error, field) {
         errorField.appendChild(span);
     }
 }
-
 function removeError(field) {
     const errorField = document.querySelector(field);
     const errorElement = document.querySelector(`${field} + input`);
@@ -52,7 +54,6 @@ function removeError(field) {
         errorField.removeChild(errorField.lastChild);
     }
 }
-
 function isValidName(name) {
     if (name.length >= 2) {
         let vr = '';
@@ -77,16 +78,13 @@ function isValidName(name) {
     }
     return false;
 }
-
 function isValidEmail(email) {
     let regex = /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)*$/gi
     if (regex.test(email)) {
         return true;
     }
-    
     return false;
 }
-
 function isValidPhoneNumber(number) {
     let regex = /^\+\d{1,3}\s\d{3}\s\d{3}\s\d{3}/g
     if (regex.test(number)) {

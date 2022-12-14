@@ -1,0 +1,222 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Ubuntu-bold;
+    src: url(../../assets/fonts/Ubuntu-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: Ubuntu-medium;
+    src: url(../../assets/fonts/Ubuntu-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: Ubuntu-regular;
+    src: url(../../assets/fonts/Ubuntu-Regular.ttf) format('truetype');
+}
+@keyframes roll-right{
+   from{transform: translateX(0px);}
+    to{transform: translateX(25px);} 
+}
+@keyframes roll-left{
+   from{transform: translateX(25px);}
+    to{transform: translateX(0px);} 
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Ubuntu-regular, sans-serif;
+}
+*::selection{
+    background-color: hsl(206, 100%, 59%);
+}
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(206, 94%, 87%);
+}
+section#side-bar{
+    background-image: url(../../assets/images/bg-sidebar-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100vw;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+section#select-plan > form{
+    background-color: hsl(0, 0%, 100%);
+    transform: translate(30px, -40px);
+    border-radius: 10px;
+    width: calc(100% - 100px);
+    gap: 20px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: width 1s, height 1s, transform 1s;
+    transition-timing-function: ease;
+}
+section#select-plan  h1{
+    font-family: Ubuntu-bold, sans-serif;
+    font-weight: 700;
+}
+section > footer{
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.circle{
+    border: 1px solid hsl(0, 0%, 100%);
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    font-family: Ubuntu-medium, sans-serif;
+    color: white;
+}
+div.selected{
+   background-color: hsl(206, 94%, 87%);
+   color: black;
+}
+div.circle:hover{
+    background-color: hsl(206, 94%, 87%);
+    cursor: pointer;
+    color: black;
+    transition: background-color 1s;
+    transition-timing-function: ease;
+}
+div.info{
+    display: none;
+}
+div.cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div.card{
+    border: 2px solid hsl(229, 24%, 87%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+div.card:hover{
+    border-color:  hsl(243, 100%, 62%);
+    background-color:hsl(231, 100%, 99%);
+    cursor: pointer;
+}
+div.card div#arcade-img, div#pro-img, div#advanced-img{
+    height: 50%;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+div.card div#arcade-img{
+    background-image: url(../../assets/images/icon-arcade.svg);
+}
+div.card div#advanced-img{
+    background-image: url(../../assets/images/icon-advanced.svg);
+}
+div.card div#pro-img{
+    background-image: url(../../assets/images/icon-pro.svg);
+}
+div.card p{
+    font-family: Ubuntu-medium, sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+div.select{
+    border-color:  hsl(243, 100%, 62%);
+    background-color:hsl(231, 100%, 99%);
+}
+.selected-time{
+    color: hsl(213, 96%, 18%);
+}
+div.card > p > span{
+    font-size: 16px;
+}
+div#toggle-back{
+    width: 40px;
+    height: 35%;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 10px;
+    align-items: center;
+    padding: 1.5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+}
+div#toggle{
+    position: relative;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+div#time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color:hsl(231, 100%, 99%);
+    border-radius: 10px;
+}
+section#select-plan button#btnNext{
+    position: relative;
+    right: 10px;
+    height: 45px;
+    width: 100px;
+    font-family: Ubuntu-medium, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    background-color: hsl(213, 96%, 18%);
+    border: 1px solid hsl(213, 96%, 18%);
+    border-radius: 5px;
+}
+section#select-plan button#btnNext:hover{
+    cursor: pointer;
+    background-color: hsl(243, 100%, 62%);
+    border-color: hsl(243, 100%, 62%);
+}
+section#select-plan button#btnGoBack{
+    position: relative;
+    left: 10px;
+    height: 45px;
+    width: 100px;
+    font-family: Ubuntu-medium, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(229, 24%, 87%);
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+}
+
+section#select-plan button#btnGoBack:hover{
+    cursor: pointer;
+    background-color: hsla(229, 24%, 87%, 0.24);
+    border-color: hsl(229, 24%, 87%);
+    color:hsl(213, 96%, 18%);
+}
+span{
+    color: hsl(229, 24%, 87%);
+}
+.attribution { display: none; }

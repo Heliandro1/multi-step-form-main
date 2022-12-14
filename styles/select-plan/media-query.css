@@ -20,7 +20,7 @@
         transition: width 1s, height 1s;
         transition-timing-function: ease;
     }
-    section#personal-info{
+    section#select-plan{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -28,10 +28,10 @@
         width: 70%;
         height: 95%;
     }
-    section#personal-info > form{
+    section#select-plan > form{
         transform: none;
     }
-    section#personal-info  h1{
+    section#select-plan  h1{
         font-size: 40px;
     }
     section > footer{
@@ -44,7 +44,7 @@
         align-items: center;
     }
     section#side-bar{
-        background-image: url(../assets/images/bg-sidebar-desktop.svg);
+        background-image: url(../../assets/images/bg-sidebar-desktop.svg);
         background-position: bottom;
         height: 95%;
         width: 300px;
@@ -66,10 +66,43 @@
         font-family: Ubuntu-medium;
         font-weight: 500;
     }
-    section#personal-info button{
-        right: 50px;
-        border-radius: 10px;
+    div.cards-container{
+        flex-direction: row;
+        justify-content: space-around;
+        height: 180px;
+        width: 90%;
+    }
+    div#time{
+        width: 90%;
+    }
+    div.card div#arcade-img, div#pro-img, div#advanced-img{
+        width: 100%;
+        background-position: 10px;
+    }
+    div.card{
+        height: 150px;
+        width: 130px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-grow: 0;
+    }
+    div.card  p{
+        text-align: left;
+        padding: 10px;
+    }
+    section > footer{
+        position: relative;
+        bottom: 0;
+        width: 90%;
+        justify-content: flex-start;
+        gap: 50%;
+        
+    }
+    section#select-plan button#btnNext,
+    section#select-plan button#btnGoBack{
         width: 120px;
+        border-radius: 10px;
     }
     .attribution { 
         font-size: 11px; 
