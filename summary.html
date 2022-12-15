@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png"> 
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="styles/summary/style.css">
+    <link rel="stylesheet" href="styles/summary/media-query.css">
+</head>
+<body> 
+    <main>
+        <section id="side-bar">
+        <div>
+            <div class="circle">1</div>
+            <div class="info">
+                <span>STEP 1</span>
+                <h1>YOUR INFO</h1>
+            </div>
+        </div>
+        <div>
+            <div class="circle">2</div>
+            <div class="info">
+                <span>STEP 2</span>
+                <h1>SELECT PLAN</h1>
+            </div>
+        </div>
+        <div>
+            <div class="circle">3</div>
+            <div class="info">
+                <span>STEP 3</span>
+                <h1>ADD-ONS</h1>
+            </div>
+        </div>
+        <div>
+            <div class="circle selected">4</div>
+                <div class="info">
+                <span>STEP 4</span>
+                <h1>SUMMARY</h1>
+            </div>
+        </div>
+        </section>
+        <!-- Step 4 start -->
+        <section id="summary">
+            <form action="#" method="post">
+                <div>
+                    <h1>Finishing Up</h1>
+                </div>
+                <div>
+                    <p>
+                        <span>Double-check everything looks OK before confirming.</span>
+                    </p>
+                </div>
+                <div class="plan-container">
+                    <div id="plan-selected">
+                    </div>
+                </div>
+                <section class="total-selected">
+                </section>
+            </form>
+            <footer>
+                <button id="btnGoBack">Go Back</button>
+                <button id="btnConfirm">Confirm</button>
+            </footer>
+        </section>
+    <!-- Step 4 end -->
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/adérito-caxala" rel="noopener noreferer" target="_blank">Adérito Caxala</a>.
+  </div>
+  <script src="script/summary.js"></script>
+</body>
+</html>

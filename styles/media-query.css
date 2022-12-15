@@ -66,6 +66,9 @@
         font-family: Ubuntu-medium;
         font-weight: 500;
     }
+    div.info h1{
+        color: hsl(0, 0%, 100%);
+    }
     section#personal-info button{
         right: 50px;
         border-radius: 10px;

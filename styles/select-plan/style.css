@@ -52,6 +52,7 @@ section#side-bar{
 }
 section#select-plan > form{
     background-color: hsl(0, 0%, 100%);
+    color:hsl(213, 96%, 18%);
     transform: translate(30px, -40px);
     border-radius: 10px;
     width: calc(100% - 100px);

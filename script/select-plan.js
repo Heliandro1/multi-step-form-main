@@ -57,11 +57,20 @@ function handleCardClick() {
 
 function isCardSelected() {
     if (cardSelected) {
-        return true;
+        const planName = document.querySelector("div.select > p > strong");
+        const planPrice = document.querySelector("div.select p span");
+        const selectedTime = document.querySelector(".selected-time");
+        addPlan(`${planName.innerText} (${selectedTime.innerText})`, planPrice.innerText.split('\n')[0], selectedTime.innerText);
+        window.location = 'add-ons.html';
+        return;
     }
     const p = document.querySelector("div#erro > p");
     p.innerText = "Please select your plan";
     p.style.color = 'red';
     p.style.textAlign = 'center';
     return false;
+}
+
+function addPlan(name, price, period) {
+    localStorage.setItem('plan', JSON.stringify([name, price, period]));
 }

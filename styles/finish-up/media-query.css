@@ -20,18 +20,19 @@
         transition: width 1s, height 1s;
         transition-timing-function: ease;
     }
-    section#select-plan{
+    section#finish-up{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         align-items: center;
+        justify-content: center;
         width: 70%;
         height: 95%;
     }
-    section#select-plan > form{
+    section#finish-up > form{
         transform: none;
+        height: 50%;
     }
-    section#select-plan  h1{
+    section#finish-up  h1{
         font-size: 40px;
     }
     section#side-bar{
@@ -59,44 +60,6 @@
     }
     div.info h1{
         color: hsl(0, 0%, 100%);
-    }
-    div.cards-container{
-        flex-direction: row;
-        justify-content: space-around;
-        height: 180px;
-        width: 90%;
-    }
-    div#time{
-        width: 90%;
-    }
-    div.card div#arcade-img, div#pro-img, div#advanced-img{
-        width: 100%;
-        background-position: 10px;
-    }
-    div.card{
-        height: 150px;
-        width: 130px;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-grow: 0;
-    }
-    div.card  p{
-        text-align: left;
-        padding: 10px;
-    }
-    section > footer{
-        position: relative;
-        bottom: 0;
-        width: 90%;
-        justify-content: flex-start;
-        gap: 50%;
-        
-    }
-    section#select-plan button#btnNext,
-    section#select-plan button#btnGoBack{
-        width: 120px;
-        border-radius: 10px;
     }
     .attribution { 
         font-size: 11px; 

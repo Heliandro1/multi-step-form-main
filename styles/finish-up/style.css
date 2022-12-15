@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Ubuntu-bold;
+    src: url(../../assets/fonts/Ubuntu-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: Ubuntu-medium;
+    src: url(../../assets/fonts/Ubuntu-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: Ubuntu-regular;
+    src: url(../../assets/fonts/Ubuntu-Regular.ttf) format('truetype');
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Ubuntu-regular, sans-serif;
+    color: hsl(213, 96%, 18%);
+}
+*::selection{
+    background-color: hsl(206, 100%, 59%);
+}
+body, html{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(206, 94%, 87%);
+}
+section#side-bar{
+    background-image: url(../../assets/images/bg-sidebar-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100vw;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+section#finish-up > form{
+    background-color: hsl(0, 0%, 100%);
+    transform: translate(30px, -40px);
+    border-radius: 10px;
+    width: calc(100% - 100px);
+    gap: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    transition: width 1s, height 1s, transform 1s;
+    transition-timing-function: ease;
+}
+section#finish-up > form > div > p{
+    text-align: center;
+}
+section#finish-up h1{
+    font-family: Ubuntu-bold, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+div.circle{
+    border: 1px solid hsl(0, 0%, 100%);
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 10px;
+    font-family: Ubuntu-medium, sans-serif;
+    color: white;
+}
+div.selected{
+   background-color: hsl(206, 94%, 87%);
+   color: black;
+}
+div.circle:hover{
+    background-color: hsl(206, 94%, 87%);
+    cursor: pointer;
+    color: black;
+    transition: background-color 1s;
+    transition-timing-function: ease;
+}
+div.info{
+    display: none;
+}
+span{
+    color: hsl(229, 24%, 87%);
+}
+.attribution { display: none; }

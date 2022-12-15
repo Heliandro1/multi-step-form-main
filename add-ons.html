@@ -6,29 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png"> 
     <title>Frontend Mentor | Multi-step form</title>
-    <link rel="stylesheet" href="styles/select-plan/style.css">
-    <link rel="stylesheet" href="styles/select-plan/media-query.css">
+    <link rel="stylesheet" href="styles/add-ons/style.css">
+    <link rel="stylesheet" href="styles/add-ons/media-query.css">
 </head>
 <body> 
     <main>
         <section id="side-bar">
         <div>
             <div class="circle">1</div>
-                <div class="info">
+            <div class="info">
                 <span>STEP 1</span>
                 <h1>YOUR INFO</h1>
             </div>
         </div>
         <div>
-            <div class="circle selected">2</div>
-                <div class="info">
+            <div class="circle">2</div>
+            <div class="info">
                 <span>STEP 2</span>
                 <h1>SELECT PLAN</h1>
             </div>
         </div>
         <div>
-            <div class="circle">3</div>
-                <div class="info">
+            <div class="circle selected">3</div>
+            <div class="info">
                 <span>STEP 3</span>
                 <h1>ADD-ONS</h1>
             </div>
@@ -41,47 +41,45 @@
             </div>
         </div>
         </section>
-     <!-- Step 2 start -->
-        <section id="select-plan">
+      <!-- Step 3 start -->
+        <section id="add-ons">
             <form action="#" method="post">
                 <div>
-                    <h1>Select your plan</h1>
+                    <h1>Pick add-ons</h1>
                 </div>
                 <div>
                     <p>
-                        <span>You have the option of monthly or yearly billing.</span>
+                        <span>Add-ons help enhance your gaming experience.</span>
                     </p>
                 </div>
                 <div class="cards-container">
                     <div class="card">
-                        <div id="arcade-img"></div>
-                        <p><strong>Arcade</strong> <br><span id="sarcade">$9/mo</span></p>
-                    </div>
-                    <div class="card">
-                        <div id="advanced-img"></div>
+                        <div>
+                            <input type="checkbox" name="onlineService" id="onlineService">
+                        </div>
                         <p>
-                            <strong>Advanced</strong> <br>
-                            <span id="sadvanced">$12/mo</span>
+                            <strong>Online service</strong> <br><span>Access to multiplayer games</span>
                         </p>
+                        <p class="price">+$1/mo</p>
                     </div>
                     <div class="card">
-                        <div id="pro-img"></div>
-                        <p><strong>Pro</strong> <br><span id="spro">$15/mo</span></p>
+                        <div>
+                            <input type="checkbox" name="lagerStorage" id="lagerStorage">
+                        </div>
+                        <p>
+                            <strong>Larger storage</strong><br><span>Extra 1TB of cloud save</span>
+                        </p>
+                        <p class="price">+$2/mo</p>
                     </div>
-                </div>
-                <div id="erro">
-                    <p></p>
-                </div>
-                <div id="time">
-                    <p>
-                        <span class="selected-time"><strong>Monthly</strong></span>
-                    </p>
-                    <div id="toggle-back">
-                        <div id="toggle"></div>
+                    <div class="card">
+                        <div>
+                            <input type="checkbox" name="customProfile" id="customProfile">
+                        </div>
+                        <p>
+                            <strong>Customizable Profile</strong> <br><span>Custom theme on your profile</span>
+                        </p>
+                        <p class="price">+$2/mo</p>
                     </div>
-                    <p>
-                        <span><strong>Yearly</strong></span>
-                    </p>
                 </div>
             </form>
             <footer>
@@ -89,12 +87,12 @@
                 <button id="btnNext">Next Step</button>
             </footer>
         </section>
-   <!-- Step 2 end -->
+        <!-- Step 3 end -->
   </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.linkedin.com/in/adérito-caxala" rel="noopener noreferer" target="_blank">Adérito Caxala</a>.
   </div>
-  <script src="script/select-plan.js"></script>
+  <script src="script/add-ons.js"></script>
 </body>
 </html>

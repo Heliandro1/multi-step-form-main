@@ -1,21 +1,21 @@
 @charset "UTF-8";
 @font-face {
     font-family: Ubuntu-bold;
-    src: url(../assets/fonts/Ubuntu-Bold.ttf) format('truetype');
+    src: url(../../assets/fonts/Ubuntu-Bold.ttf) format('truetype');
 }
 @font-face {
     font-family: Ubuntu-medium;
-    src: url(../assets/fonts/Ubuntu-Medium.ttf) format('truetype');
+    src: url(../../assets/fonts/Ubuntu-Medium.ttf) format('truetype');
 }
 @font-face {
     font-family: Ubuntu-regular;
-    src: url(../assets/fonts/Ubuntu-Regular.ttf) format('truetype');
+    src: url(../../assets/fonts/Ubuntu-Regular.ttf) format('truetype');
 }
 *{
     padding: 0px;
     margin: 0px;
     font-family: Ubuntu-regular, sans-serif;
-    color:hsl(213, 96%, 18%);
+    color: hsl(213, 96%, 18%);
 }
 *::selection{
     background-color: hsl(206, 100%, 59%);
@@ -33,7 +33,7 @@ main{
     background-color: hsl(206, 94%, 87%);
 }
 section#side-bar{
-    background-image: url(../assets/images/bg-sidebar-mobile.svg);
+    background-image: url(../../assets/images/bg-sidebar-mobile.svg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -42,9 +42,8 @@ section#side-bar{
     justify-content: center;
     align-items: center;
     gap: 15px;
-
 }
-section#personal-info > form{
+section#summary > form{
     background-color: hsl(0, 0%, 100%);
     transform: translate(30px, -40px);
     border-radius: 10px;
@@ -57,22 +56,18 @@ section#personal-info > form{
     transition: width 1s, height 1s, transform 1s;
     transition-timing-function: ease;
 }
-section#personal-info  h1{
+section#summary h1{
     font-family: Ubuntu-bold, sans-serif;
     font-weight: 700;
 }
-section#personal-info p{
-    font-size: 16px;
-    color: hsl(229, 24%, 87%);
-}
 section > footer{
     background-color: hsl(0, 0%, 100%);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 }
 div.circle{
@@ -100,38 +95,50 @@ div.circle:hover{
 div.info{
     display: none;
 }
-div.field{
+div.plan-container{
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color:hsl(231, 100%, 99%);
+    border: 1px solid hsl(231, 100%, 99%);
+    border-radius: 10px;
+    gap: 10px;
 }
-div.field > input{
-    font-family: Ubuntu-medium, sans-serif;
-    font-weight: 700;
-    font-size: 16px;
+div.plan-container > div#plan-selected{
+    display: flex;
     padding: 10px;
-    height: 25px;
-    border: 1px solid hsl(229, 24%, 87%);
-    border-radius: 5px;
-    font-weight: 400;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    border-bottom: 2px solid hsl(229, 24%, 87%);
 }
-div.field > div{
+div#plan-selected > p > a{
+    color: hsl(229, 24%, 87%);
+}
+div.add-ons{
     display: flex;
     justify-content: space-between;
+    width: 90%;
 }
-@keyframes slide {
-    0%{color: rgb(255, 255, 255);}
-    50%{color: rgba(255, 0, 0, 0.5);}
-    100%{color: red;}
+section.total-selected{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-self: center;
 }
-span.erro{
-    color: red;
-    animation: slide;
-    animation-duration: 1s;
-    animation-timing-function: ease;
+p.add-on-price{
+    font-weight: 500;
+    font-family: Ubuntu-medium, sans-serif;
 }
-section#personal-info button{
-    position: absolute;
+section.total-selected > p#total{
+    color: hsl(243, 100%, 62%);
+    font-weight: 700;
+}
+section#summary button#btnConfirm{
+    position: relative;
     right: 10px;
     height: 45px;
     width: 100px;
@@ -139,17 +146,30 @@ section#personal-info button{
     font-weight: 500;
     font-size: 16px;
     color: white;
-    background-color: hsl(213, 96%, 18%);
-    border: 1px solid hsl(213, 96%, 18%);
+    background-color: hsl(243, 100%, 62%);
+    border: 1px solid hsl(243, 100%, 62%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+section#summary button#btnGoBack{
+    position: relative;
+    left: 10px;
+    height: 45px;
+    width: 100px;
+    font-family: Ubuntu-medium, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: hsl(229, 24%, 87%);
+    background-color: transparent;
+    border: none;
     border-radius: 5px;
 }
-
-section#personal-info button:hover{
+section#summary button#btnGoBack:hover{
     cursor: pointer;
-    background-color: hsl(243, 100%, 62%);
-    border-color: hsl(243, 100%, 62%);
+    background-color: hsla(229, 24%, 87%, 0.24);
+    border-color: hsl(229, 24%, 87%);
+    color:hsl(213, 96%, 18%);
 }
-
 span{
     color: hsl(229, 24%, 87%);
 }

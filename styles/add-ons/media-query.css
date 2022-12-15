@@ -20,7 +20,7 @@
         transition: width 1s, height 1s;
         transition-timing-function: ease;
     }
-    section#select-plan{
+    section#add-ons{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -28,10 +28,10 @@
         width: 70%;
         height: 95%;
     }
-    section#select-plan > form{
+    section#add-ons > form{
         transform: none;
     }
-    section#select-plan  h1{
+    section#add-ons  h1{
         font-size: 40px;
     }
     section#side-bar{
@@ -57,31 +57,23 @@
         font-family: Ubuntu-medium;
         font-weight: 500;
     }
-    div.info h1{
-        color: hsl(0, 0%, 100%);
-    }
     div.cards-container{
-        flex-direction: row;
-        justify-content: space-around;
-        height: 180px;
+        flex-direction: column;
+        height: 90%;
         width: 90%;
-    }
-    div#time{
-        width: 90%;
-    }
-    div.card div#arcade-img, div#pro-img, div#advanced-img{
-        width: 100%;
-        background-position: 10px;
     }
     div.card{
-        height: 150px;
-        width: 130px;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        height: 90px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         flex-grow: 0;
     }
-    div.card  p{
+    div.card > div{
+        width: 15%;
+    }
+    p.price{
         text-align: left;
         padding: 10px;
     }
@@ -93,8 +85,11 @@
         gap: 50%;
         
     }
-    section#select-plan button#btnNext,
-    section#select-plan button#btnGoBack{
+    div.info h1{
+        color: hsl(0, 0%, 100%);
+    }
+    section#add-ons button#btnNext,
+    section#add-ons button#btnGoBack{
         width: 120px;
         border-radius: 10px;
     }
