@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [here](https://github.com/Heliandro1/multi-step-form-main)
-- Live Site URL: [here](https://heliandro1.github.io/multi-step-form-main/)
+- Live Site URL: [here](https://multi-step-form-main-pi.vercel.app/)
 
 ### Built with
 
